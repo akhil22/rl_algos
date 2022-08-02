@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-08-01 Mon 19:51 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="USL" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org631be1d">1. Vanilla policy gradient</a>
+<ul>
+<li><a href="#orgd561528">1.1. With normalized reward on Cartpole-v0</a>
+<ul>
+<li><a href="#orga35dab0">1.1.1. Model Info</a></li>
+<li><a href="#org84e305b">1.1.2. Parameters</a></li>
+<li><a href="#org1b1f7da">1.1.3. Episode Reward Plots</a></li>
+<li><a href="#org4d2ea3e">1.1.4. Some findings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orga5d970e">2. Vanilla policy gradient with learned value function as baseline</a></li>
+<li><a href="#org9ddd94c">3. plots</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org631be1d" class="outline-2">
+<h2 id="org631be1d"><span class="section-number-2">1.</span> Vanilla policy gradient</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgd561528" class="outline-3">
+<h3 id="orgd561528"><span class="section-number-3">1.1.</span> With normalized reward on Cartpole-v0</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-orga35dab0" class="outline-4">
+<h4 id="orga35dab0"><span class="section-number-4">1.1.1.</span> Model Info</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+Linear(4,28)&#x2013;&gt;Dropout(P = 0.6)&#x2013;&gt;ReLU()&#x2013;&gt;Linear(128, 2)&#x2013;&gt;Functional.Softmax
+</p>
+</div>
+</div>
+<div id="outline-container-org84e305b" class="outline-4">
+<h4 id="org84e305b"><span class="section-number-4">1.1.2.</span> Parameters</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<ul class="org-ul">
+<li>gamma = 0.99</li>
+<li>running reward step = 0 .5</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1b1f7da" class="outline-4">
+<h4 id="org1b1f7da"><span class="section-number-4">1.1.3.</span> Episode Reward Plots</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<ul class="org-ul">
+<li>x axis length is till the final episode of learning. Normalized returns make
+the learning faster</li>
+<li>Normalized Returns with gamma 0.99(No to be confused with reward r, its G<sub>t</sub>)</li>
+</ul>
+
+<div id="orgf0aa159" class="figure">
+<p><img src="./vanilla_ppo_with_normalized_returns_cartpole_v1_ep_reward.png" alt="vanilla_ppo_with_normalized_returns_cartpole_v1_ep_reward.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Without Normalized Returns with gamma 0.99</li>
+</ul>
+
+<div id="org54ba3c5" class="figure">
+<p><img src="./vanilla_ppo_without_normalized_returns_cartpole_v1_ep_reward.png" alt="vanilla_ppo_without_normalized_returns_cartpole_v1_ep_reward.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Normalized returns with gamma 0.95</li>
+</ul>
+
+<div id="org40577c6" class="figure">
+<p><img src="./vanilla_ppo_with_normalized_returns_gamma_0.95_cartpole_v1_ep_reward.png" alt="vanilla_ppo_with_normalized_returns_gamma_0.95_cartpole_v1_ep_reward.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Normalized returns with gamma 1.0</li>
+</ul>
+
+<div id="org8d61a90" class="figure">
+<p><img src="./vanilla_ppo_without_normalized_returns_cartpole_v1_ep_reward.png" alt="vanilla_ppo_without_normalized_returns_cartpole_v1_ep_reward.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4d2ea3e" class="outline-4">
+<h4 id="org4d2ea3e"><span class="section-number-4">1.1.4.</span> Some findings</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<ul class="org-ul">
+<li>policy gradient performance is highly dependent on the random seed, no
+consistency in number of episodes, sometimes it takes a lot of episodes
+to learn</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orga5d970e" class="outline-2">
+<h2 id="orga5d970e"><span class="section-number-2">2.</span> Vanilla policy gradient with learned value function as baseline</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>With value function as baseline the policy gradient learns much faster and
+is consistent between different independent runs as compared to
+normalized returns here are some plots:</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9ddd94c" class="outline-2">
+<h2 id="org9ddd94c"><span class="section-number-2">3.</span> plots</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>following plot with gamma = 0.99 shows the learning ends around 350 episodes as compared to the
+500-600 episode without baseline</li>
+</ul>
+
+<div id="org26b5778" class="figure">
+<p><img src="./cartpole_v_1_policy_grad_normalized_return_gamme_0.99_h_size_64_base_line.png" alt="cartpole_v_1_policy_grad_normalized_return_gamme_0.99_h_size_64_base_line.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>following plot compares learning with different gammas notice that learning is
+much more stable and ends consistently for policy gradient with value function
+baseline for different discount factors(gammas)</li>
+</ul>
+<p>
+<img src="./reward_comparison_h_size_64_basline.png" alt="reward_comparison_h_size_64_basline.png" />  <img src="./reward_comparison_h_size_64.png" alt="reward_comparison_h_size_64.png" /> 
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: USL</p>
+<p class="date">Created: 2022-08-01 Mon 19:51</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+* Vanilla policy gradient
+** With normalized reward on Cartpole-v0
+*** Model Info
+Linear(4,28)-->Dropout(P = 0.6)-->ReLU()-->Linear(128, 2)-->Functional.Softmax
+*** Parameters
+- gamma = 0.99
+- running reward step = 0 .5
+*** Episode Reward Plots
+- x axis length is till the final episode of learning. Normalized returns make
+  the learning faster
+- Normalized Returns with gamma 0.99(No to be confused with reward r, its G_t)
+#+ATTR_ORG: :width 400
+[[./vanilla_ppo_with_normalized_returns_cartpole_v1_ep_reward.png]]
+- Without Normalized Returns with gamma 0.99
+#+ATTR_ORG: :width 400
+[[./vanilla_ppo_without_normalized_returns_cartpole_v1_ep_reward.png]]
+- Normalized returns with gamma 0.95
+#+ATTR_ORG: :width 400
+[[./vanilla_ppo_with_normalized_returns_gamma_0.95_cartpole_v1_ep_reward.png]]
+- Normalized returns with gamma 1.0
+#+ATTR_ORG: :width 400
+[[./vanilla_ppo_without_normalized_returns_cartpole_v1_ep_reward.png]]
+
+*** Some findings
+- policy gradient performance is highly dependent on the random seed, no
+  consistency in number of episodes, sometimes it takes a lot of episodes
+  to learn 
+* Vanilla policy gradient with learned value function as baseline
+- With value function as baseline the policy gradient learns much faster and
+  is consistent between different independent runs as compared to
+  normalized returns here are some plots:
+* plots
+- following plot with gamma = 0.99 shows the learning ends around 350 episodes as compared to the
+  500-600 episode without baseline 
+#+ATTR_ORG: :width 400
+[[./cartpole_v_1_policy_grad_normalized_return_gamme_0.99_h_size_64_base_line.png]]
+- following plot compares learning with different gammas notice that learning is
+  much more stable and ends consistently for policy gradient with value function
+  baseline for different discount factors(gammas)
+#+ATTR_ORG: :width 400
+[[./reward_comparison_h_size_64_basline.png]]  [[./reward_comparison_h_size_64.png]] 

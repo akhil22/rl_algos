@@ -1,0 +1,22 @@
+* Vanilla policy gradient
+** With normalized reward on Cartpole-v0
+*** Model Info
+Linear(4,28)-->Dropout(P = 0.6)-->ReLU()-->Linear(128, 2)-->Functional.Softmax
+*** Parameters
+- gamma = 0.99
+- running reward step = 0 .5
+*** Episode Reward Plots
+- x axis length is till the final episode of learning. Normalized returns make
+  the learning faster
+- Normalized Returns with gamma 0.99(No to be confused with reward r, its G_t)
+#+ATTR_ORG: :width 400
+[[./vanilla_ppo_with_normalized_returns_cartpole_v1_ep_reward.png]]
+- Without Normalized Returns with gamma 0.99
+#+ATTR_ORG: :width 400
+[[./vanilla_ppo_without_normalized_returns_cartpole_v1_ep_reward.png]]
+- Normalized returns with gamma 0.95
+#+ATTR_ORG: :width 400
+[[./vanilla_ppo_with_normalized_returns_gamma_0.95_cartpole_v1_ep_reward.png]]
+- Normalized returns with gamma 1.0
+#+ATTR_ORG: :width 400
+[[./vanilla_ppo_without_normalized_returns_cartpole_v1_ep_reward.png]]
